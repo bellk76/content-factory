@@ -1,0 +1,68 @@
+:root {
+  --bg: #0f1115;
+  --card: #171a21;
+  --line: #262b36;
+  --text: #e6e8ee;
+  --muted: #8b93a7;
+  --accent: #6c8cff;
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font: 15px/1.5 system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+}
+.app { max-width: 900px; margin: 0 auto; padding: 32px 20px 64px; }
+header h1 { margin: 0 0 4px; }
+.muted { color: var(--muted); font-size: 13px; }
+
+.create { display: flex; gap: 8px; margin: 24px 0; flex-wrap: wrap; }
+.create input {
+  flex: 1 1 200px; padding: 10px 12px; border-radius: 8px;
+  border: 1px solid var(--line); background: #0c0e12; color: var(--text);
+}
+button {
+  padding: 10px 16px; border-radius: 8px; border: 1px solid var(--accent);
+  background: var(--accent); color: #fff; cursor: pointer; font-weight: 600;
+}
+button.ghost { background: transparent; color: var(--muted); border-color: var(--line); }
+button:disabled { opacity: .6; cursor: default; }
+
+.run { position: relative; }
+.card {
+  background: var(--card); border: 1px solid var(--line); border-radius: 12px;
+  padding: 16px 18px; margin: 16px 0 8px;
+}
+.card-head { display: flex; justify-content: space-between; align-items: flex-start; gap: 12px; }
+.card h3 { margin: 0; }
+.card h4 { margin: 14px 0 6px; }
+.card section { border-top: 1px dashed var(--line); margin-top: 12px; padding-top: 8px; }
+.hook, .cta { color: #cdd3ff; }
+.badge {
+  font-size: 12px; padding: 3px 10px; border-radius: 999px;
+  border: 1px solid var(--line); white-space: nowrap;
+}
+.status-done, .status-approved { border-color: #2f9e63; color: #7ee2a8; }
+.status-needs_review, .status-rejected { border-color: #b4453f; color: #ff8f88; }
+.status-awaiting_approval { border-color: #b08a2e; color: #ffd479; }
+.actions { display: flex; gap: 8px; margin: 0 0 20px; }
+.error { color: #ff8f88; margin: 8px 0; }
+ul, ol { margin: 6px 0; padding-left: 20px; }
+
+.settings { background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 14px 16px; margin: 16px 0; }
+.settings h4 { margin: 0 0 10px; }
+.chips { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 10px; }
+.chip { display: inline-flex; align-items: center; gap: 6px; padding: 6px 12px; border: 1px solid var(--line); border-radius: 999px; font-size: 14px; cursor: pointer; }
+.chip.on { border-color: var(--accent); color: #cdd3ff; }
+.chip input { accent-color: var(--accent); }
+.edit-row { display: grid; grid-template-columns: 80px 1fr 1fr 1fr; gap: 8px; }
+.edit label.row { flex-direction: row; align-items: center; gap: 8px; }
+.sec-head { display: flex; justify-content: space-between; align-items: center; }
+button.small { padding: 4px 10px; font-size: 13px; }
+.edit { display: flex; flex-direction: column; gap: 10px; margin: 8px 0; }
+.edit label { display: flex; flex-direction: column; gap: 4px; font-size: 13px; color: var(--muted); }
+.edit input, .edit textarea {
+  width: 100%; padding: 8px 10px; border-radius: 8px; border: 1px solid var(--line);
+  background: #0c0e12; color: var(--text); font: inherit; resize: vertical;
+}

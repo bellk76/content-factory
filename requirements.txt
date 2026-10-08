@@ -1,0 +1,15 @@
+# Ядро (обязательно)
+pydantic>=2.6
+requests>=2.31
+python-dotenv>=1.0
+
+# API
+fastapi>=0.110
+uvicorn[standard]>=0.29
+
+# Мультиагентный граф (основной режим).
+# Если не установлен — используется встроенный fallback-harness (см. app/graph/build.py).
+langgraph>=0.2
+
+# Тесты
+pytest>=8.0

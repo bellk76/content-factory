@@ -1,0 +1,14 @@
+services:
+  api:
+    build: .
+    ports:
+      - "8000:8000"
+    environment:
+      LLM_PROVIDER: ${LLM_PROVIDER:-mock}
+      LLM_BASE_URL: ${LLM_BASE_URL:-}
+      LLM_API_KEY: ${LLM_API_KEY:-}
+      LLM_MODEL: ${LLM_MODEL:-mock}
+      DB_PATH: /app/data/content_factory.db
+      PUBLISH_DRY_RUN: ${PUBLISH_DRY_RUN:-true}
+    volumes:
+      - ./data:/app/data
